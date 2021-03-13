@@ -11,13 +11,21 @@
     <!-- link to font awesome -->
     <!-- link to google fonts -maybe google fonts? -->
     <!-- link to jquery css -->
-    <!-- link to css file -->
+    <link rel="stylesheet" href="/development/css/style.css">
 
 </head>
 
 <body>
     <!-- header -->
-    <header>
+    <header class="is-flex ">
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="https://bulma.io">
+                    <img src="/Assets/Images/LOGO-01.png" width="" height="">
+                </a>
+        <div>
+            <h1 class="title is-1 ">Last Resort</h1>  
+        </div>
         <!-- <div id="header-left" class="header-left">
             <div id="logo">
                  logo here -->
@@ -34,11 +42,7 @@
         </div>
     </header>
     <!-- nav section -->
-    <nav class="navbar" role="navigation" aria-label="main navigation">
-        <div class="navbar-brand">
-            <a class="navbar-item" href="https://bulma.io">
-                <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
-            </a>
+    
 
             <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
                 data-target="navbarBasicExample">
@@ -95,28 +99,31 @@
             </div>
         </div>
     </nav>
+
     <!-- main section - maybe a background-image? -->
     <main>
         <!-- main box on top for questions -->
-        <div id="question-container" class="question-container">
-            Are you alone?
-        </div>
-        <!-- smaller boxes for responses-->
-        <div class="answer-container">
-            <div id="answer-container-right">
-                Yes
+        <div class="center-content">
+            <div id="question-container" class="question-container">
+                Are you alone?
             </div>
-            <div id="answer-container-left">
-                No
+            <!-- smaller boxes for responses-->
+            <div class="answer-container">
+                <div id="answer-container-right">
+                    Yes
+                </div>
+                <div id="answer-container-left">
+                    No
+                </div>
             </div>
+            
         </div>
         <div id="paragraph section" class="paragraph-section">
-            <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur necessitatibus explicabo
-                aspernatur dignissimos? Ea nihil quidem ratione maxime voluptatibus officia.
-            </p>
-        </div>
-
+                <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur necessitatibus explicabo
+                    aspernatur dignissimos? Ea nihil quidem ratione maxime voluptatibus officia.
+                </p>
+            </div>
         <!-- footer section -maybe bottom nav as well? -->
         <footer>
 
