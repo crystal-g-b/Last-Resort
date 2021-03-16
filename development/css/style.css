@@ -29,6 +29,10 @@ img{
    z-index: -1;
 }
 
+.hide {
+    display: none;
+}
+
 .search-results{
     border: black solid 1px;
 }
