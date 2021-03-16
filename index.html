@@ -11,35 +11,27 @@
     <!-- link to font awesome -->
     <!-- link to google fonts -maybe google fonts? -->
     <!-- link to jquery css -->
-    <!-- link to css file -->
+    <link rel="stylesheet" href="development/css/style.css">
 
 </head>
 
 <body>
     <!-- header -->
-    <header>
-        <!-- <div id="header-left" class="header-left">
-            <div id="logo">
-                 logo here -->
-        <!-- </div>
-            <div id="title">
-                Last resort
-            </div>
-        </div> -->
-        <!-- dropdown that displays hidden items -->
-        <div id="header-right" class="header-right">
-            <div id="nav-bar-right">
-                <!-- maybe we can make this display the main nav-bar when we click on it -->
-            </div>
+    <header class="is-flex">
+
+        <a href="/index.html">
+            <img src="/Assets/Images/LOGO-01.png" width="75" height="75">
+        </a>
+
+        <div class="has-text-centered">
+            <h1 class="title is-1 has-text-centered has-text-white is-size-">Last Resort</h1>
         </div>
+
     </header>
     <!-- nav section -->
-    <nav class="navbar" role="navigation" aria-label="main navigation">
-        <div class="navbar-brand">
-            <a class="navbar-item" href="https://bulma.io">
-                <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
-            </a>
 
+    <nav>
+        <div>
             <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
                 data-target="navbarBasicExample">
                 <span aria-hidden="true"></span>
@@ -48,84 +40,95 @@
             </a>
         </div>
 
-        <div id="navbarBasicExample" class="navbar-menu">
-            <div class="navbar-start">
-                <a class="navbar-item">
-                    Home
+        <div id="navbarBasicExample" class="navbar-menu is-flex is-justify-content-center is-fixed-top">
+            <div class="navbar">
+
+                <a class="navbar-item" href="./pages/results.html">
+                    Results
                 </a>
 
-                <a class="navbar-item">
-                    Documentation
+                <a class="navbar-item" href="./pages/drinks.html">
+                    Drinks
                 </a>
 
-                <div class="navbar-item has-dropdown is-hoverable">
-                    <a class="navbar-link">
-                        More
-                    </a>
+                <a class="navbar-item" href="./pages/music.html">
+                    Music
+                </a>
 
-                    <div class="navbar-dropdown">
-                        <a class="navbar-item">
-                            About
-                        </a>
-                        <a class="navbar-item">
-                            Jobs
-                        </a>
-                        <a class="navbar-item">
-                            Contact
-                        </a>
-                        <hr class="navbar-divider">
-                        <a class="navbar-item">
-                            Report an issue
-                        </a>
-                    </div>
-                </div>
             </div>
 
-            <div class="navbar-end">
-                <div class="navbar-item">
-                    <div class="buttons">
-                        <a class="button is-primary">
-                            <strong>Sign up</strong>
-                        </a>
-                        <a class="button is-light">
-                            Log in
-                        </a>
-                    </div>
-                </div>
-            </div>
         </div>
     </nav>
+
+    <!-- adding an image or a background to give the user a better idea of what they are here for -->
+
     <!-- main section - maybe a background-image? -->
     <main>
         <!-- main box on top for questions -->
-        <div id="question-container" class="question-container">
-            Are you alone?
-        </div>
-        <!-- smaller boxes for responses-->
-        <div class="answer-container">
-            <div id="answer-container-right">
-                Yes
-            </div>
-            <div id="answer-container-left">
-                No
-            </div>
-        </div>
-        <div id="paragraph section" class="paragraph-section">
-            <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur necessitatibus explicabo
-                aspernatur dignissimos? Ea nihil quidem ratione maxime voluptatibus officia.
-            </p>
-        </div>
+        <div class="center-content box m-6">
+            <div id="question-containerTest" class="question-containerTest">
+                <div class="questionsTest">
+                    <p id="intro">Welcome to Last Resort!</p><br>
+                </div>
+                <div class="answers">
+                    <p id="intro-p">After a year of Covid, are you having problems with your social skills? You’re
+                        certainly not
+                        alone! Studies have shown that many people are unable to socialize properly as a result of
+                        Covid. This app will help take some of the stress away from setting the right atmosphere! Now
+                        you can work on becoming the social person you once were! Unlike other apps, which just provide
+                        you with drinks or a date. It will provide you with the perfect drink so you don’t have to spend
+                        any extra time stressing about it. It will also provide a recommendation to you with a song or
+                        movie of your choice. We know how hard it can be to make up your mind after a hard week at work.
+                        All you want to do is relax and hang out. Don’t worry, we got you covered! Our questions are
+                        handpicked by expert Psychologists to predict your drink and music choice based on your
+                        personality. Click the start button below to begin!
+                    </p>
+                    <div class="container">
+                        <div id="question-container" class="hide">
+                            <div id="question">Question</div>
+                            <div id="answer-buttons" class="btn-grid">
+                                <button class="btn">Answer 1</button>
+                                <button class="btn">Answer 2</button>
+                                <button class="btn">Answer 3</button>
+                                <button class="btn">Answer 4</button>
+                            </div>
+                        </div>
+                        <div class="controls">
+                            <button id="start-btn" class="start-btn btn">Start</button>
+                            <button id="next-btn" class="next-btn btn hide">Next</button>
+                        </div>
+                        <!-- <button id="start-btn">Start</button> -->
 
-        <!-- footer section -maybe bottom nav as well? -->
-        <footer>
 
-        </footer>
+                        <!-- smaller boxes for responses-->
+                        <div class="answer-container hide">
+                            <div id="answer-container-right">
+                                Yes
+                            </div>
+                            <div id="answer-container-left">
+                                No
+                            </div>
+                        </div>
+                        <!-- <div id="results-section hide">
+                <p id="results"></p>
+            </div> -->
+                    </div>
+                    <div id="paragraph section" class="paragraph-section">
+                        <p>
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur necessitatibus
+                            explicabo
+                            aspernatur dignissimos? Ea nihil quidem ratione maxime voluptatibus officia.
+                        </p>
+                    </div>
+                    <!-- footer section -maybe bottom nav as well? -->
+                    <footer>
+
+                    </footer>
     </main>
     <!-- link to jquery -->
 
     <!-- links to javascript files -->
-
+    <script src="development/js/script.js"></script>
 </body>
 
 </html>

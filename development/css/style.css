@@ -1,0 +1,44 @@
+:root{
+--background: #EE8334;
+
+}
+
+header{
+    padding: 2%;
+    margin: 1%;
+    position: relative;
+    text-align: center;
+    background-color: var(--background);
+}
+
+h1{
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+
+}
+
+a{
+    z-index: 10;
+}
+
+img{
+   z-index: -1;
+}
+
+.hide {
+    display: none;
+}
+
+.search-results{
+    border: black solid 1px;
+}
+
+.navbar-menu{
+    margin: 1%;
+    text-align: center;
+    border: black solid 1px
+}
