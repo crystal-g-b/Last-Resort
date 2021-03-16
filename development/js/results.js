@@ -1,15 +1,13 @@
 var tableEl = document.querySelector('.table')
 
 
-// calling for the function for the local storage
+
 function init (){
     callingStorage()
 }
 
+// calling for the function for the local storage
 function callingStorage(){
-    // I need a 
-    
-    // calling the storage pair, do we want to match it to the city or the music?
     var values = [],
         keys = Object.keys(localStorage),
         values = Object.values(localStorage)
@@ -25,12 +23,8 @@ function callingStorage(){
         node.appendChild(subNode)
         subNode.textContent = keys[i]
         node.appendChild(subNode2)
-        subNode2.textContent = values[i]
-        
+        subNode2.textContent = values[i]       
     }
-
-    // return values;
 }
-
 
 init()
