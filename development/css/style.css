@@ -11,14 +11,22 @@ header{
     background-color: var(--background);
 }
 
+<<<<<<< HEAD
+h1{
+=======
 h1{ 
+>>>>>>> 69039f2559611dd485a299d54d90722e2c1e05af
     position: absolute;
     margin-left: auto;
     margin-right: auto;
     left: 0;
     right: 0;
     text-align: center;
+<<<<<<< HEAD
+
+=======
     
+>>>>>>> 69039f2559611dd485a299d54d90722e2c1e05af
 }
 
 a{
@@ -41,4 +49,8 @@ img{
     margin: 1%;
     text-align: center;
     border: black solid 1px
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 69039f2559611dd485a299d54d90722e2c1e05af
