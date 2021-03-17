@@ -112,16 +112,18 @@ function clearStatusClass(element) {
   element.classList.remove('wrong')
 }
 function scoreTotals() {
-    if (score = 20) {
+    if (score == 20) {
         // classical music and merlot
-    }else if(score = 40){
+    }else if(score == 40){
         // jazz and
-    }else if(score = 60){
+    }else if(score == 60){
         // rock and whiskey sour
-    }else if (score = 80){
+    }else if (score == 80){
         // hip and and margarita
-    }else if(score = 100){
+    }else if(score == 100){
         // edm and vodka redbull
+    }else if (score == 0){
+      // you are lonely!
     }
 }
 
