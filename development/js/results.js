@@ -1,6 +1,5 @@
 var tableEl = document.querySelector('.table')
-
-
+var earlyEl = document.querySelector('.early')
 
 function init (){
     callingStorage()
@@ -8,6 +7,7 @@ function init (){
 
 // calling for the function for the local storage
 function callingStorage(){
+
     var values = [],
         keys = Object.keys(localStorage),
         values = Object.values(localStorage)
