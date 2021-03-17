@@ -6,6 +6,8 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Paytone+One&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="../development/css/style.css">
         <title>Music page</title>
     </head>
@@ -17,12 +19,17 @@
             </a>
             
             <div class="has-text-centered">
-                <h1 class="title is-1 has-text-centered has-text-white is-size-">Last Resort</h1>  
+                <h1 class="title is-1 has-text-centered has-text-white is-size-">LAST RESORT</h1>  
             </div>
         
         </header>
         <div id="navbarBasicExample" class="navbar-menu is-flex is-justify-content-center is-fixed-top">
             <div class="navbar">
+
+                <a class="navbar-item" href="/index.html">
+                    Home
+                </a>
+
                 <a class="navbar-item" href="/pages/results.html">
                     Results
                 </a>
@@ -42,11 +49,23 @@
         <!-- this is the container for the input fields and the search results -->
         <div class="is-flex">
             <div class="input-box box">
-                <input class="input" type="text" placeholder="Text input">
+                <input class="input" type="text" placeholder="Music-genre Choice">
                 <button class="button is-normal">Submit</button>
             </div>
             <div class="search-results">
-                <p>test</p>
+                <div class="card-content w75">
+                    <div class="media">
+                        <div class="media-left">
+                            <figure class="image is-48x48">
+                            <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image">
+                            </figure>
+                        </div>
+                        <div class="media-content">
+                            <p class="title is-4">John Smith</p>
+                            <p class="subtitle is-6">@johnsmith</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
