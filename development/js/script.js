@@ -9,6 +9,8 @@ const pSection = document.querySelector(".paragraph-section");
 const controls = document.querySelector(".controls");
 let drinkName;
 let musicPlaylist;
+const center = document.querySelector(".center-content");
+
 // const resultsSection = document.querySelector("#results");
 let score = 0;
 let shuffledQuestions, currentQuestionIndex
@@ -79,8 +81,17 @@ function selectAnswer(e) {
     controls.appendChild(newDiv);
     newP = document.createElement("p");
     newP.id = "results";
-    newP.innerText = "Thank you for playing! We recommend you drink this drink and listen to this music playlist ";
+    newP.innerText = "Thank you for playing! Your score is " + score;
     newDiv.appendChild(newP);
+    musicDiv = document.createElement("div");
+    musicDiv.id = "music";
+    drinksDiv = document.createElement("div");
+    drinksDiv.id = "drinks";
+    musicDiv.innerText = "Here is your music playlist!";
+    drinksDiv.innerText = "Here is your drink!";
+    center.appendChild(musicDiv);
+    center.appendChild(drinksDiv);
+
     startButton.innerText = 'Restart'
     startButton.classList.remove('hide')
   }
