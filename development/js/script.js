@@ -77,15 +77,17 @@ function selectAnswer(e) {
   } else {
     questionContainerElement.classList.add('hide');
     newDiv = document.createElement('div');
-    newDiv.id = "results-section";
+    newDiv.classList = "results-section";
     controls.appendChild(newDiv);
     newP = document.createElement("p");
     newP.id = "results";
     newP.innerText = "Thank you for playing! Your score is " + score;
     newDiv.appendChild(newP);
-    musicDiv = document.createElement("div");
+    let musicInsert = document.createElement('div')
+    let drinksInsert = document.createElement('div')
+    musicDiv = newDiv.appendChild(musicInsert);
     musicDiv.id = "music";
-    drinksDiv = document.createElement("div");
+    drinksDiv = newDiv.appendChild(drinksInsert);
     drinksDiv.id = "drinks";
     musicDiv.innerText = "Here is your music playlist!";
     drinksDiv.innerText = "Here is your drink!";
