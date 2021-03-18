@@ -40,6 +40,10 @@ img{
    z-index: -1;
 }
 
+table{
+    margin:auto;
+}
+
 .hide {
     display: none;
 }
@@ -57,18 +61,11 @@ img{
     text-align: center;
 }
 
-table{
-    margin:auto;
+.btn {
+    margin: 1%;
 }
-
 
 @media only screen and (max-width: 600px) {
     .logo-el {
         display: none;
     }
-/* remove logo at smaller screen */
-
-.btn {
-    margin: 1%;
-}
-
