@@ -20,7 +20,7 @@ body{
     font-family: Paytone One;
     background-image: url(https://images.pexels.com/photos/858466/pexels-photo-858466.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260);
     background-size: 100% 100%;
-    
+    overflow: auto;
 }
 
 h1{
@@ -69,3 +69,4 @@ table{
     .logo-el {
         display: none;
     }
+}

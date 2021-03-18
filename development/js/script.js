@@ -30,7 +30,6 @@ function startGame() {
     console.log("the game has begun!")
     intro.classList.add("hide");
     introP.classList.add("hide");
-    pSection.classList.add("hide");
   shuffledQuestions = questions.sort(() => Math.random() - .5)
   currentQuestionIndex = 0
   questionContainerElement.classList.remove('hide')
