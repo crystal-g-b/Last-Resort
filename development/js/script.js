@@ -9,7 +9,9 @@ const pSection = document.querySelector(".paragraph-section");
 const controls = document.querySelector(".controls");
 let drinkName;
 let musicPlaylist;
-const center = document.querySelector(".center-content");
+let center = document.querySelector(".center-content");
+let results = document.querySelector("#results-section")
+let restartBtn = document.querySelector("#restart-btn");
 
 // const resultsSection = document.querySelector("#results");
 let score = 0;
@@ -21,6 +23,7 @@ nextButton.addEventListener('click', () => {
   currentQuestionIndex++
   setNextQuestion()
 })
+restartBtn.addEventListener('click', reStart)
 
 function startGame() {
   startButton.classList.add('hide')
@@ -44,6 +47,7 @@ function showQuestion(question) {
   question.answers.forEach(answer => {
     const button = document.createElement('button')
     button.innerText = answer.text
+    button.classList.add("btn","button", "is-link", "is-focused");
     button.classList.add('btn')
     if (answer.correct) {
       button.dataset.correct = answer.correct
@@ -94,8 +98,9 @@ function selectAnswer(e) {
     center.appendChild(musicDiv);
     center.appendChild(drinksDiv);
 
-    startButton.innerText = 'Restart'
-    startButton.classList.remove('hide')
+    // startButton.innerText = 'Restart'
+    // startButton.classList.remove('hide')
+    restartBtn.classList.remove("hide");
   }
 }
 
@@ -172,3 +177,10 @@ const questions = [
     ]
   }
 ]
+
+
+
+function reStart() {
+
+	location.reload();
+}

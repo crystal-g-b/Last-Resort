@@ -61,8 +61,14 @@ table{
     margin:auto;
 }
 
+
 @media only screen and (max-width: 600px) {
     .logo-el {
         display: none;
     }
 /* remove logo at smaller screen */
+
+.btn {
+    margin: 1%;
+}
+
