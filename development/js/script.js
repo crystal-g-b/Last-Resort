@@ -103,7 +103,7 @@ function selectAnswer(e) {
   }
 }
 
-function renderResults(drinkName){
+function renderResults(drinkName, image){
     questionContainerElement.classList.add('hide');
     newDiv = document.createElement('div');
     newDiv.classList = "results-section";
@@ -112,22 +112,20 @@ function renderResults(drinkName){
     newP.id = "results";
     newP.innerText = "Thank you for playing! Your score is " + score;
     newDiv.appendChild(newP);
-<<<<<<< HEAD
-    let musicInsert = document.createElement('div')
-    let drinksInsert = document.createElement('div')
-    musicDiv = newDiv.appendChild(musicInsert);
-    musicDiv.id = "music";
-    drinksDiv = newDiv.appendChild(drinksInsert);
-=======
     musicDiv = document.createElement("p");
     musicDiv.id = "music";
-    drinksDiv = document.createElement("p");
->>>>>>> 2524a011c6931af282982c72f63fd14f51e670a8
-    drinksDiv.id = "drinks";
-    musicDiv.innerText = drinkName;
-    drinksDiv.innerText = "Here is your drink!";
+    drinksDiv = document.createElement("div");
+    drinksPtag = document.createElement("p");
+    
+    musicDiv.innerText = 'music maybe';
+    drinksPtag.innerText = drinkName;
+    imageTag = document.createElement("img")
+    imageTag.src = image
+    
     center.appendChild(musicDiv);
-    center.appendChild(drinksDiv);
+    center.appendChild(drinksDiv).appendChild(imageTag).classList.add('drinks');
+    center.appendChild(drinksDiv).appendChild(drinksPtag)
+    
 }
 
 function setStatusClass(element, correct) {
@@ -157,7 +155,7 @@ function scoreTotals() {
         drinkName = data.drinks[0].strDrink
         console.log(data.drinks[0].strDrink)
         console.log(image, drinkName)
-        renderResults(drinkName);
+        renderResults(drinkName, image);
     });
         // classical music and wine cooler
     }else if(score == 40){
@@ -172,7 +170,7 @@ function scoreTotals() {
         drinkName = data.drinks[0].strDrink
         console.log(data.drinks[0].strDrink)
         console.log(image, drinkName)
-        renderResults(drinkName);
+        renderResults(drinkName, image);
     });
         // jazz and gin fizz
     }else if(score == 60){
@@ -187,7 +185,7 @@ function scoreTotals() {
         drinkName = data.drinks[0].strDrink
         console.log(data.drinks[0].strDrink)
         console.log(image, drinkName)
-        renderResults(drinkName);
+        renderResults(drinkName, image);
     });
         // rock and whiskey sour
     }else if (score == 80){
@@ -202,7 +200,7 @@ function scoreTotals() {
         drinkName = data.drinks[0].strDrink
         console.log(data.drinks[0].strDrink)
         console.log(image, drinkName)
-        renderResults(drinkName);
+        renderResults(drinkName, image);
     });
         // hip and and margarita
     }else if(score == 100){
@@ -217,7 +215,7 @@ function scoreTotals() {
         drinkName = data.drinks[0].strDrink
         console.log(data.drinks[0].strDrink)
         console.log(image, drinkName)
-        renderResults(drinkName);
+        renderResults(drinkName, image);
     });
         // edm and Long Island Tea
     }else if (score == 0){
