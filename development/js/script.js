@@ -120,7 +120,7 @@ function clearStatusClass(element) {
 }
 function scoreTotals() {
     if (score == 20) {
-      fetch('https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=13056')
+      fetch('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=wine_cooler')
       .then(function (response){
         return response.json();
     })
@@ -133,7 +133,7 @@ function scoreTotals() {
     });
         // classical music and wine cooler
     }else if(score == 40){
-      fetch('https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=11310')
+      fetch('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=gin_fizz')
       .then(function (response){
         return response.json();
     })
@@ -146,7 +146,7 @@ function scoreTotals() {
     });
         // jazz and gin fizz
     }else if(score == 60){
-      fetch('https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=11004')
+      fetch('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=whiskey_sour')
       .then(function (response){
         return response.json();
     })
@@ -159,7 +159,7 @@ function scoreTotals() {
     });
         // rock and whiskey sour
     }else if (score == 80){
-      fetch('hhttps://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=10007')
+      fetch('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita')
       .then(function (response){
         return response.json();
     })
@@ -172,7 +172,7 @@ function scoreTotals() {
     });
         // hip and and margarita
     }else if(score == 100){
-      fetch('https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=10002')
+      fetch('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=long_island_iced_tea')
       .then(function (response){
         return response.json();
     })
