@@ -79,6 +79,8 @@ function selectAnswer(e) {
   if (shuffledQuestions.length > currentQuestionIndex + 1) {
     nextButton.classList.remove('hide')
   } else {
+    console.log("end")
+    scoreTotals()
     questionContainerElement.classList.add('hide');
     newDiv = document.createElement('div');
     newDiv.id = "results-section";
@@ -118,17 +120,76 @@ function clearStatusClass(element) {
 }
 function scoreTotals() {
     if (score == 20) {
-        // classical music and merlot
+      fetch('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=wine_cooler')
+      .then(function (response){
+        return response.json();
+    })
+    .then(function(data){
+        console.log("Drink Wine Cooler");
+        console.log(data);
+        var image = data.drinks[0].strDrinkThumb
+        var drinkName = data.drinks[0].strDrink
+        console.log(image, drinkName)
+    });
+        // classical music and wine cooler
     }else if(score == 40){
-        // jazz and
+      fetch('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=gin_fizz')
+      .then(function (response){
+        return response.json();
+    })
+    .then(function(data){
+        console.log("Drink Gin Fizz");
+        console.log(data);
+        var image = data.drinks[0].strDrinkThumb
+        var drinkName = data.drinks[0].strDrink
+        console.log(image, drinkName)
+    });
+        // jazz and gin fizz
     }else if(score == 60){
+      fetch('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=whiskey_sour')
+      .then(function (response){
+        return response.json();
+    })
+    .then(function(data){
+        console.log("Drink Whiskey Sour");
+        console.log(data);
+        var image = data.drinks[0].strDrinkThumb
+        var drinkName = data.drinks[0].strDrink
+        console.log(image, drinkName)
+    });
         // rock and whiskey sour
     }else if (score == 80){
+      fetch('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita')
+      .then(function (response){
+        return response.json();
+    })
+    .then(function(data){
+        console.log("Drink Margarita");
+        console.log(data);
+        var image = data.drinks[0].strDrinkThumb
+        var drinkName = data.drinks[0].strDrink
+        console.log(image, drinkName)
+    });
         // hip and and margarita
     }else if(score == 100){
-        // edm and vodka redbull
+      fetch('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=long_island_iced_tea')
+      .then(function (response){
+        return response.json();
+    })
+    .then(function(data){
+        console.log("Drink Long Island");
+        console.log(data);
+        var image = data.drinks[0].strDrinkThumb
+        var drinkName = data.drinks[0].strDrink
+        console.log(image, drinkName)
+    });
+        // edm and Long Island Tea
     }else if (score == 0){
+      console.log("0")
       // you are lonely!
+    }
+    else {
+      console.log(score)
     }
 }
 
