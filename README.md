@@ -17,7 +17,8 @@ Applying the APIs to different pages so people could type in the genre or a liqu
 
 ### API's 
 
-### Screenshot
+### Screenshot -
+![image](https://user-images.githubusercontent.com/63420051/111835730-b0bf5580-88cb-11eb-990b-ec887fd8f545.png)
 
 ### Code Used in the App
 HTML, CSS and Javascript
