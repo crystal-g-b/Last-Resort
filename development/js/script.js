@@ -131,6 +131,20 @@ function scoreTotals() {
         var drinkName = data.drinks[0].strDrink
         console.log(image, drinkName)
     });
+
+    if (score === 20) {
+      fetch("https://cors-anywhere.herokuapp.com/https://api.musixmatch.com/ws/1.1/track.search?apikey=b55d513b5fa7b2b04f1b875994dd8041&page=1&page_size=1&f_music_genre_id=5")
+      .then(function(response) {
+          return response.json();
+      })
+      .then(function(data){
+          console.log("The Lord of Abyss");
+          console.log(data);
+      });
+      
+    }
+
+
         // classical music and wine cooler
     }else if(score == 40){
       fetch('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=gin_fizz')
@@ -144,6 +158,16 @@ function scoreTotals() {
         var drinkName = data.drinks[0].strDrink
         console.log(image, drinkName)
     });
+   
+    fetch('https://cors-anywhere.herokuapp.com/https://api.musixmatch.com/ws/1.1/track.search?apikey=b55d513b5fa7b2b04f1b875994dd8041&page=1&page_size=1&f_music_genre_id=1114')
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function(data){
+      console.log("Trade Winds");
+      console.log(data);
+  });
+
         // jazz and gin fizz
     }else if(score == 60){
       fetch('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=whiskey_sour')
@@ -157,6 +181,15 @@ function scoreTotals() {
         var drinkName = data.drinks[0].strDrink
         console.log(image, drinkName)
     });
+
+    fetch('https://cors-anywhere.herokuapp.com/https://api.musixmatch.com/ws/1.1/track.search?apikey=b55d513b5fa7b2b04f1b875994dd8041&page=1&page_size=1&f_music_genre_id=21')
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function(data){
+      console.log("Watch The Rebellion");
+      console.log(data);
+  });
         // rock and whiskey sour
     }else if (score == 80){
       fetch('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita')
@@ -170,6 +203,15 @@ function scoreTotals() {
         var drinkName = data.drinks[0].strDrink
         console.log(image, drinkName)
     });
+
+    fetch('https://cors-anywhere.herokuapp.com/https://api.musixmatch.com/ws/1.1/track.search?apikey=b55d513b5fa7b2b04f1b875994dd8041&page=1&page_size=1&f_music_genre_id=1073')
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function(data){
+      console.log("13.10.90");
+      console.log(data);
+  });
         // hip and and margarita
     }else if(score == 100){
       fetch('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=long_island_iced_tea')
@@ -183,6 +225,16 @@ function scoreTotals() {
         var drinkName = data.drinks[0].strDrink
         console.log(image, drinkName)
     });
+
+    fetch('https://cors-anywhere.herokuapp.com/https://api.musixmatch.com/ws/1.1/track.search?apikey=b55d513b5fa7b2b04f1b875994dd8041&page=1&page_size=1&f_music_genre_id=7')
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function(data){
+      console.log("I Will Break You");
+      console.log(data);
+  });
+
         // edm and Long Island Tea
     }else if (score == 0){
       console.log("0")
