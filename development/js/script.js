@@ -8,6 +8,7 @@ const introP = document.querySelector("#intro-p");
 const pSection = document.querySelector(".paragraph-section");
 const controls = document.querySelector(".controls");
 let drinkName;
+let musicName;
 let musicPlaylist;
 let center = document.querySelector(".center-content");
 let results = document.querySelector("#results-section")
@@ -103,6 +104,35 @@ function selectAnswer(e) {
   }
 }
 
+function addAudio(sourceUrl) {
+	var audio = document.createElement('audio');
+  var source = document.createElement('source');
+  audio.controls = 'true';
+  // var sourceUrl;
+  // switch(score) {
+  //   case 20:
+  //     sourceUrl = './assets/audio/song20.mp3';
+  //     break;
+  //   case 40:
+  //     sourceUrl = './assets/audio/song40.mp3';
+  //     break;
+  //   case 60:
+  //     sourceUrl = './assets/audio/song60.mp3';
+  //     break;
+  //   case 80:
+  //     sourceUrl = './assets/audio/song80.mp3';
+  //     break;
+  //   default:
+  //     sourceUrl = './assets/audio/song100.mp3';
+  //     break;
+  // }
+  source.src = sourceUrl;
+  source.type = 'audio/mpeg';
+  audio.appendChild(source);
+  center.appendChild(audio);
+  audio.play();
+}
+
 function renderResults(drinkName, image){
     questionContainerElement.classList.add('hide');
     newDiv = document.createElement('div');
@@ -116,17 +146,31 @@ function renderResults(drinkName, image){
     musicDiv.id = "music";
     drinksDiv = document.createElement("div");
     drinksPtag = document.createElement("p");
-    
+
     musicDiv.innerText = 'music maybe';
     drinksPtag.innerText = drinkName;
     imageTag = document.createElement("img")
     imageTag.src = image
-    
+
     center.appendChild(musicDiv);
     center.appendChild(drinksDiv).appendChild(imageTag).classList.add('drinks');
     center.appendChild(drinksDiv).appendChild(drinksPtag)
-    
 }
+
+function renderResultsMusic(musicLink, musicName){
+  console.log('look at me')
+  musicDiv = document.createElement("div")
+  musicLinkName = document.createElement("p");
+  musicLink.innerText = musicLink
+  musicPtag = document.createElement("p");
+  musicPtag.innerText = musicName;
+  // center.appendChild(musicDiv).appendChild(musicLink)
+  center.appendChild(musicDiv).appendChild(musicPtag);
+  addAudio();
+  return musicName
+}
+
+
 
 function setStatusClass(element, correct) {
   clearStatusClass(element)
@@ -143,13 +187,46 @@ function clearStatusClass(element) {
   element.classList.remove('wrong')
 }
 function scoreTotals() {
-    if (score == 20) {
-      fetch('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=wine_cooler')
-      .then(function (response){
+  var drinkUrl;
+  var musicUrl;
+  switch(score) {
+    case 20:
+      drinkUrl = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s=wine_cooler';
+      musicUrl = "https://cors-anywhere.herokuapp.com/https://api.musixmatch.com/ws/1.1/track.search?apikey=b55d513b5fa7b2b04f1b875994dd8041&page=1&page_size=1&f_music_genre_id=5";
+      console.log("Drink Wine Cooler");
+      console.log("The Lord of Abyss");
+      break;
+    case 40:
+      drinkUrl = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s=gin_fizz';
+      musicUrl = 'https://cors-anywhere.herokuapp.com/https://api.musixmatch.com/ws/1.1/track.search?apikey=b55d513b5fa7b2b04f1b875994dd8041&page=1&page_size=1&f_music_genre_id=1114';
+      console.log("Drink Gin Fizz");
+      console.log("Trade Winds");
+      break;
+    case 60:
+      drinkUrl = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s=whiskey_sour';
+      musicUrl = 'https://cors-anywhere.herokuapp.com/https://api.musixmatch.com/ws/1.1/track.search?apikey=b55d513b5fa7b2b04f1b875994dd8041&page=1&page_size=1&f_music_genre_id=21';
+      console.log("Drink Whiskey Sour");
+      console.log("Watch The Rebellion");
+      break;
+    case 80:
+      drinkUrl = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita';
+      musicUrl = 'https://cors-anywhere.herokuapp.com/https://api.musixmatch.com/ws/1.1/track.search?apikey=b55d513b5fa7b2b04f1b875994dd8041&page=1&page_size=1&f_music_genre_id=1073';
+      console.log("Drink Margarita");
+      console.log("13.10.90");
+      break;
+    default:
+      drinkUrl = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s=long_island_iced_tea';
+      musicUrl = 'https://cors-anywhere.herokuapp.com/https://api.musixmatch.com/ws/1.1/track.search?apikey=b55d513b5fa7b2b04f1b875994dd8041&page=1&page_size=1&f_music_genre_id=7';
+      console.log("Drink Long Island");
+      console.log("I Will Break You");
+      break;
+  }
+
+  fetch(drinkUrl)
+    .then(function (response){
         return response.json();
     })
     .then(function(data){
-        console.log("Drink Wine Cooler");
         console.log(data);
         image = data.drinks[0].strDrinkThumb
         drinkName = data.drinks[0].strDrink
@@ -157,74 +234,28 @@ function scoreTotals() {
         console.log(image, drinkName)
         renderResults(drinkName, image);
     });
-        // classical music and wine cooler
-    }else if(score == 40){
-      fetch('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=gin_fizz')
-      .then(function (response){
-        return response.json();
+
+  fetch(musicUrl)
+    .then(function (response) {
+      return response.json();
     })
     .then(function(data){
-        console.log("Drink Gin Fizz");
-        console.log(data);
-        image = data.drinks[0].strDrinkThumb
-        drinkName = data.drinks[0].strDrink
-        console.log(data.drinks[0].strDrink)
-        console.log(image, drinkName)
-        renderResults(drinkName, image);
+      console.log(data);
+      musicName = data.message.body.track_list[0].track.track_name;
+      var musicLink = data.message.body.track_list[0].track.track_share_url;
+      // var musicId = data.message.body.track_list[0].track.commontrack_id;
+      // fetch('https://cors-anywhere.herokuapp.com/https://api.musixmatch.com/ws/1.1/track.get?apikey=b55d513b5fa7b2b04f1b875994dd8041&commontrack_id=' + musicId)
+      // .then(function(response) {
+      //   response.json();
+      // })
+      // .then(function(data) {
+      //   console.log(data);
+      //   console.log(data.message.body);
+      //   // addAudio(data.message.body.track);
+      // });
+      console.log(musicName, musicLink);
+      renderResultsMusic(musicLink, musicName);
     });
-        // jazz and gin fizz
-    }else if(score == 60){
-      fetch('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=whiskey_sour')
-      .then(function (response){
-        return response.json();
-    })
-    .then(function(data){
-        console.log("Drink Whiskey Sour");
-        console.log(data);
-        image = data.drinks[0].strDrinkThumb
-        drinkName = data.drinks[0].strDrink
-        console.log(data.drinks[0].strDrink)
-        console.log(image, drinkName)
-        renderResults(drinkName, image);
-    });
-        // rock and whiskey sour
-    }else if (score == 80){
-      fetch('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita')
-      .then(function (response){
-        return response.json();
-    })
-    .then(function(data){
-        console.log("Drink Margarita");
-        console.log(data);
-        image = data.drinks[0].strDrinkThumb
-        drinkName = data.drinks[0].strDrink
-        console.log(data.drinks[0].strDrink)
-        console.log(image, drinkName)
-        renderResults(drinkName, image);
-    });
-        // hip and and margarita
-    }else if(score == 100){
-      fetch('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=long_island_iced_tea')
-      .then(function (response){
-        return response.json();
-    })
-    .then(function(data){
-        console.log("Drink Long Island");
-        console.log(data);
-        image = data.drinks[0].strDrinkThumb
-        drinkName = data.drinks[0].strDrink
-        console.log(data.drinks[0].strDrink)
-        console.log(image, drinkName)
-        renderResults(drinkName, image);
-    });
-        // edm and Long Island Tea
-    }else if (score == 0){
-      console.log("0")
-      // you are lonely!
-    }
-    else {
-      console.log(score)
-    }
 }
 
 const questions = [
