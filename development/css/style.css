@@ -9,7 +9,7 @@ html, body {
 
 header{
     padding: 2%;
-    margin: 1%;
+    margin: 0% 1% 1% 1%;
     position: relative;
     text-align: center;
     background-color: var(--background);
@@ -19,12 +19,11 @@ header{
 body{
     font-family: Paytone One;
     background-image: url(https://images.pexels.com/photos/858466/pexels-photo-858466.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260);
-    /* background-image: url(https://images.pexels.com/photos/3394221/pexels-photo-3394221.jpeg?cs=srgb&dl=pexels-inga-seliverstova-3394221.jpg&fm=jpg); */
     background-size: 100% 100%;
+    overflow: auto;
 }
 
 h1{
-    position: absolute;
     margin-left: auto;
     margin-right: auto;
     left: 0;
@@ -41,8 +40,20 @@ img{
    z-index: -1;
 }
 
+table{
+    margin:auto;
+}
+
 .hide {
     display: none;
+}
+
+.drinks{
+    height: 200px;
+    width: 200px;
+}
+.logo-title{
+    align-self: center;
 }
 
 .search-results{
@@ -52,13 +63,14 @@ img{
 .navbar-menu{
     margin: 1%;
     text-align: center;
-    border: black solid 1px
-
 }
 
-table{
-    margin:auto;
-}
 .btn {
     margin: 1%;
+}
+
+@media only screen and (max-width: 600px) {
+    .logo-el {
+        display: none;
+    }
 }
