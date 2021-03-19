@@ -7,7 +7,7 @@ const intro = document.querySelector("#intro");
 const introP = document.querySelector("#intro-p");
 const pSection = document.querySelector(".paragraph-section");
 const controls = document.querySelector(".controls");
-let drinkName;
+let drinkName; 
 let musicName;
 let musicPlaylist;
 let center = document.querySelector(".center-content");
@@ -119,7 +119,6 @@ function renderResults(drinkName, image){
 }
 // function to render results of music
 function renderResultsMusic(musicLink, musicName){
-  console.log('look at me');
   musicDiv = document.createElement("div");
   musicLinkName = document.createElement("p");
   musicLink.innerText = musicLink;
@@ -190,6 +189,7 @@ function scoreTotals() {
         console.log(data.drinks[0].strDrink);
         console.log(image, drinkName);
         renderResults(drinkName, image);
+  
     });
 
   fetch(musicUrl)
@@ -211,10 +211,24 @@ function scoreTotals() {
       //   console.log(data.message.body);
       //   // addAudio(data.message.body.track);
       // });
+      musicName.innerText = data.message.body.track_list[0].track.track_name
       console.log(musicName, musicLink);
       renderResultsMusic(musicLink, musicName);
+      storageLocal (musicName, drinkName)
     });
+
+  
+    
+  
 }
+
+function storageLocal (musicName, drinkName) {
+  console.log(musicName)
+  console.log(drinkName)
+
+  localStorage.setItem(musicName, drinkName)
+}
+
 // questions being asked in the app
 const questions = [
   {
