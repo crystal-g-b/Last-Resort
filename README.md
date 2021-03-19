@@ -19,6 +19,9 @@ Applying the APIs to different pages so people could type in the genre or a liqu
 
 ### Screenshot
 
+### Link to Application 
+- [Link to application](https://crystal-g-b.github.io/Last-Resort/)
+
 ### Code Used in the App
 HTML, CSS and Javascript
 
