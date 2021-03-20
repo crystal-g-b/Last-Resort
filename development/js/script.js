@@ -151,30 +151,35 @@ function scoreTotals() {
       musicUrl = "https://cors-anywhere.herokuapp.com/https://api.musixmatch.com/ws/1.1/track.search?apikey=b55d513b5fa7b2b04f1b875994dd8041&page=1&page_size=1&f_music_genre_id=5";
       console.log("Drink Wine Cooler");
       console.log("The Lord of Abyss");
+      localStorage.setItem("Wine Cooler", "The Lord of Abyss")
       break;
     case 40:
       drinkUrl = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s=gin_fizz';
       musicUrl = 'https://cors-anywhere.herokuapp.com/https://api.musixmatch.com/ws/1.1/track.search?apikey=b55d513b5fa7b2b04f1b875994dd8041&page=1&page_size=1&f_music_genre_id=1114';
       console.log("Drink Gin Fizz");
       console.log("Trade Winds");
+      localStorage.setItem("Gin Fizz", "Trade Winds")
       break;
     case 60:
       drinkUrl = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s=whiskey_sour';
       musicUrl = 'https://cors-anywhere.herokuapp.com/https://api.musixmatch.com/ws/1.1/track.search?apikey=b55d513b5fa7b2b04f1b875994dd8041&page=1&page_size=1&f_music_genre_id=21';
       console.log("Drink Whiskey Sour");
       console.log("Watch The Rebellion");
+      localStorage.setItem("Whiskey Sour", "Watch The Rebellion")
       break;
     case 80:
       drinkUrl = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita';
       musicUrl = 'https://cors-anywhere.herokuapp.com/https://api.musixmatch.com/ws/1.1/track.search?apikey=b55d513b5fa7b2b04f1b875994dd8041&page=1&page_size=1&f_music_genre_id=1073';
       console.log("Drink Margarita");
       console.log("13.10.90");
+      localStorage.setItem("Drink Margarita", "13.10.90")
       break;
     default:
       drinkUrl = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s=long_island_iced_tea';
       musicUrl = 'https://cors-anywhere.herokuapp.com/https://api.musixmatch.com/ws/1.1/track.search?apikey=b55d513b5fa7b2b04f1b875994dd8041&page=1&page_size=1&f_music_genre_id=7';
       console.log("Drink Long Island");
       console.log("I Will Break You");
+      localStorage.setItem("Long Island", "I Will Break You")
       break;
   }
 
@@ -189,7 +194,7 @@ function scoreTotals() {
         console.log(data.drinks[0].strDrink);
         console.log(image, drinkName);
         renderResults(drinkName, image);
-  
+        return drinkName
     });
 
   fetch(musicUrl)
@@ -213,20 +218,9 @@ function scoreTotals() {
       // });
       musicName.innerText = data.message.body.track_list[0].track.track_name
       console.log(musicName, musicLink);
-      renderResultsMusic(musicLink, musicName);
-      storageLocal (musicName, drinkName)
+      renderResultsMusic(musicLink, musicName)
+      return musicName
     });
-
-  
-    
-  
-}
-
-function storageLocal (musicName, drinkName) {
-  console.log(musicName)
-  console.log(drinkName)
-
-  localStorage.setItem(musicName, drinkName)
 }
 
 // questions being asked in the app
