@@ -16,6 +16,8 @@ The app is at the MVP stage, where the basic funtionality of the app is complete
 Applying the APIs to different pages so people could type in the genre or a liquor that they wanted to listen to or drink a list of items would come up as suggestions for the person to select from. The pages are created and sitting in the folder for the app however in the interest of time the ideas were put into WIP.
 
 ### API's 
+Music API: https://developer.musixmatch.com/
+Drink API: https://www.thecocktaildb.com/api.php
 
 ### Screenshot -
 ![image](https://user-images.githubusercontent.com/63420051/111835730-b0bf5580-88cb-11eb-990b-ec887fd8f545.png)
