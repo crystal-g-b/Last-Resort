@@ -24,6 +24,7 @@ Drink API: https://www.thecocktaildb.com/api.php
 
 ### Link to Application 
 - [Link to application](https://crystal-g-b.github.io/Last-Resort/)
+- When you are using the link please request demo access through the cors link. That will appear in the console log at the end of the questionaire.
 
 ### Code Used in the App
 HTML, CSS and Javascript
