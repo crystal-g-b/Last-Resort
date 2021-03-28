@@ -31,3 +31,4 @@ HTML, CSS and Javascript
 ### Developers 
 Crystal Barnett, Nicholas Dyke, Brian Yampol & Joe Small 
 
+mit
