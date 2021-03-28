@@ -25,7 +25,7 @@ Drink API: https://www.thecocktaildb.com/api.php
 ### Link to Application 
 - [Link to application](https://crystal-g-b.github.io/Last-Resort/)
 
-### Code Used in the App
+### Technology Used
 HTML, CSS and Javascript
 
 ### Developers 
